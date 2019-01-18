@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>Gauge</title>
+    <script src="../d3.v4.js"></script>
+    <script src="d3arc.js"></script>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 32px;
+        }
+
+        #power-gauge g.arc {
+            fill: steelblue;
+        }
+
+        #power-gauge g.pointer {
+            fill: #e85116;
+            stroke: #b64011;
+        }
+
+        #power-gauge g.label text {
+            text-anchor: middle;
+            font-size: 14px;
+            font-weight: bold;
+            fill: #666;
+        }
+
+
+        .center-text {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+    <svg id="arc" width="960" height="500" style="border:1px solid red;">
+
+    </svg>
+</div>
+
+<script>
+    var colors = ['rgba(255, 0, 0, 0.6)', 'rgba(255, 165, 0, 0.6)', 'rgba(251, 251, 43, 0.6)', 'rgba(0, 128, 0, 0.6)', 'rgba(0, 0, 255, 0.6)', 'rgba(128, 128, 128, 0.6)']
+
+    function onDocumentReady() {
+        var d3arc1 = new D3arc(d3.select('#arc'), {
+            color: colors[0],
+            border: 4,
+            radius: [50, 60],
+            center: [0.25, 0.25]
+        });
+
+        var d3arc2 = new D3arc(d3.select('#arc'), {
+            color: colors[1],
+            border: 4,
+            radius: [50, 60],
+            center: [0.45, 0.25]
+        });
+
+
+        var d3arc3 = new D3arc(d3.select('#arc'), {
+            color: colors[2],
+            border: 4,
+            radius: [50, 60],
+            center: [0.15, 0.75]
+        });
+
+        var d3arc4 = new D3arc(d3.select('#arc'), {
+            color: colors[3],
+            border: 2,
+            radius: [50, 60],
+            center: [0.35, 0.75]
+        });
+
+        var d3arc5 = new D3arc(d3.select('#arc'), {
+            color: colors[4],
+            border: 2,
+            radius: [50, 60],
+            center: [0.55, 0.75]
+        });
+
+        setInterval(function () {
+            d3arc1.setValue({
+                value: Math.random() * 100,
+                topval: '北京',
+                centerval: Math.round(Math.random() * 100) + 'M',
+                bottomval: '+' + Math.round(Math.random() * 100) + '%'
+            });
+            d3arc2.setValue({
+                value: Math.random() * 100,
+                topval: '江苏',
+                centerval: Math.round(Math.random() * 100) + 'M',
+                bottomval: '+' + Math.round(Math.random() * 100) + '%'
+            });
+            d3arc3.setValue({
+                value: Math.random() * 100,
+                topval: '上海',
+                centerval: Math.round(Math.random() * 100) + 'M',
+                bottomval: '+' + Math.round(Math.random() * 100) + '%'
+            });
+            d3arc4.setValue({
+                value: Math.random() * 100,
+                topval: '上海',
+                centerval: Math.round(Math.random() * 100) + 'M',
+                bottomval: '+' + Math.round(Math.random() * 100) + '%'
+            });
+            d3arc5.setValue({
+                value: Math.random() * 100,
+                topval: '上海',
+                centerval: Math.round(Math.random() * 100) + 'M',
+                bottomval: '+' + Math.round(Math.random() * 100) + '%'
+            });
+        }, 2 * 1000);
+    }
+
+    if (!window.isLoaded) {
+        window.addEventListener("load", function () {
+            onDocumentReady();
+        }, false);
+    } else {
+        onDocumentReady();
+    }
+</script>
+</body>
+</html>

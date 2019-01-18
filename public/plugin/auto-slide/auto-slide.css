@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+
+.xlz-slide {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+	margin: 0 auto;
+	position: relative;
+}
+
+.xlz-slide .slide-btn {
+	cursor:pointer;
+	display: none;
+	position: absolute;
+	border-radius: 50%;
+	width:50px; height: 50px;
+	text-indent: -9999px;
+	z-index: 999;
+
+}
+
+.xlz-slide .slide-btn-left {
+	background: url("./images/leftbtn.png") no-repeat 0px 0px;
+	top: 50%;
+	left: 0px;
+}
+
+.xlz-slide .slide-btn-right {
+	background: url("./images/rightbtn.png") no-repeat 0px 0px;
+	top: 50%;
+	right: 0px;
+}
+
+.xlz-slide .apply-box {
+	height: 100%;
+	display: block;
+	white-space: nowrap;
+	overflow: auto;
+	overflow: hidden;
+	font-size: 0;
+	margin: 0;
+    padding: 0;
+}
+
+.xlz-slide .body-box {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	float: left;
+	font-size: 12px;
+}
+
+.xlz-slide .apply-box .box {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+.sign {
+	position: absolute;
+	bottom: 0px;
+}
+
+.sign li {
+	float: left;
+}

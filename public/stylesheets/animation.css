@@ -1,0 +1,464 @@
+@CHARSET "UTF-8";
+
+@-o-keyframes bar-stripes{
+from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+@-webkit-keyframes bar-stripes{
+from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+@-moz-keyframes bar-stripes{
+from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+@keyframes bar-stripes{
+from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+
+
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #337ab7;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+.progress-bar-anim{
+	-webkit-animation: bar-stripes 2s linear infinite;
+    -o-animation: bar-stripes 2s linear infinite;
+    animation: bar-stripes 2s linear infinite;
+}
+
+@-o-keyframes borderW{
+from{ width:0%;}
+to{width:100%;}
+}
+@-webkit-keyframes borderW{
+from{ width:0%;}
+to{width:100%;}
+}
+@-moz-keyframes borderW{
+from{ width:0%;}
+to{width:100%;}
+}
+@keyframes borderW{
+from{ width:0%;}
+to{width:100%;}
+}
+
+
+
+@-o-keyframes rotating{
+from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}
+@-webkit-keyframes rotating{
+from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}
+@-moz-keyframes rotating{
+from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}
+@keyframes rotating{
+from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}
+
+@-o-keyframes rotating_90{
+from{transform:rotate(90deg)}
+to{transform:rotate(0deg)}
+}
+@-webkit-keyframes rotating_90{
+from{transform:rotate(90deg)}
+to{transform:rotate(0deg)}
+}
+@-moz-keyframes rotating_90{
+from{transform:rotate(90deg)}
+to{transform:rotate(0deg)}
+}
+@keyframes rotating_90{
+from{transform:rotate(90deg)}
+to{transform:rotate(0deg)}
+}
+
+@-o-keyframes border-twinkle{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		background-color:rgba(255, 0, 0, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 0.5) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, .5) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, .5) inset;
+		border-color:rgba(255, 0, 0, 0.5)
+	}
+}
+@-webkit-keyframes border-twinkle{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		background-color:rgba(255, 0, 0, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 0.5) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, .5) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, .5) inset;
+		border-color:rgba(255, 0, 0, 0.5)
+	}
+}
+@-moz-keyframes border-twinkle{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		background-color:rgba(255, 0, 0, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 0.5) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, .5) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, .5) inset;
+		border-color:rgba(255, 0, 0, 0.5)
+	}
+}
+
+@keyframes border-twinkle{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		border-color:rgba(255, 0, 0, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 0.5) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, .5) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, .5) inset;
+		border-color:rgba(255, 0, 0, 0.5)
+	}
+}
+
+.border-twinkle {
+   -webkit-animation: border-twinkle 1s ease infinite alternate;
+    -moz-animation: border-twinkle 1s ease infinite alternate;
+    animation: border-twinkle 1s ease infinite alternate;
+}
+
+
+@-o-keyframes twinkle{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		background-color:rgba(255, 0, 0, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		background-color:rgba(255, 0, 0, 0)
+	}
+}
+@-webkit-keyframes twinkle{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		background-color:rgba(255, 0, 0, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		background-color:rgba(255, 0, 0, 0)
+	}
+}
+@-moz-keyframes twinkle{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		background-color:rgba(255, 0, 0, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		background-color:rgba(255, 0, 0, 0)
+	}
+}
+@keyframes twinkle{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 1) inset;
+		background-color:rgba(255, 0, 0, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		-moz-box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		box-shadow: 0 0 18px rgba(255, 0, 0, 0) inset;
+		background-color:rgba(255, 0, 0, 0)
+	}
+}
+
+@-o-keyframes breath-lamp{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		background-color:rgba(91, 192, 222, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		-moz-box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		background-color:rgba(91, 192, 222, 0.2)
+	}
+}
+@-webkit-keyframes breath-lamp{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		background-color:rgba(91, 192, 222, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		-moz-box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		background-color:rgba(91, 192, 222, 0.2)
+	}
+}
+@-moz-keyframes breath-lamp{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		background-color:rgba(91, 192, 222, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		-moz-box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		background-color:rgba(91, 192, 222, 0.2)
+	}
+}
+@keyframes breath-lamp{
+	0% {
+		-webkit-box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		-moz-box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		box-shadow: 0 0 18px rgba(91, 192, 222, 1) inset;
+		background-color:rgba(91, 192, 222, 0.5)
+	}
+	100% {
+		-webkit-box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		-moz-box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		box-shadow: 0 0 18px rgba(91, 192, 222, 0.3) inset;
+		background-color:rgba(91, 192, 222, 0.2)
+	}
+}
+
+
+/* border呼吸灯 */
+@-o-keyframes border-breath-lamp{
+	0% {
+		-webkit-box-shadow: 0 0 4px rgba(91, 192, 222, .3) inset;
+		-moz-box-shadow: 0 0 4px rgba(91, 192, 222, .3) inset;
+		box-shadow: 0 0 4px rgba(91, 192, 222, .3) inset;
+		
+	}
+	100% {
+		-webkit-box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		-moz-box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		
+	}
+}
+@-webkit-keyframes border-breath-lamp{
+	0% {
+		-webkit-box-shadow: 0 0 4px rgba(91, 192, 222, .3) inset;
+		-moz-box-shadow: 0 0 4px rgba(91, 192, 222, .3) inset;
+		box-shadow: 0 0 4px rgba(91, 192, 222, .3) inset;
+		
+	}
+	100% {
+		-webkit-box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		-moz-box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		
+	}
+}
+@-moz-keyframes border-breath-lamp{
+	0% {
+		-webkit-box-shadow: 0 0 4px rgba(91, 192, 222, 0.3) inset;
+		-moz-box-shadow: 0 0 4px rgba(91, 192, 222, .3) inset;
+		box-shadow: 0 0 4px rgba(91, 192, 222, .3) inset;
+	}
+	100% {
+		-webkit-box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		-moz-box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		
+	}
+}
+@keyframes border-breath-lamp{
+	0% {
+		-webkit-box-shadow: 0 0 4px rgba(91, 192, 222, .3) inset;
+		-moz-box-shadow: 0 0 4px rgba(91, 192, 222, .3) inset;
+		box-shadow: 0 0 4px rgba(91, 192, 222, .3) inset;
+	}
+	100% {
+		-webkit-box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		-moz-box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		box-shadow: 0 2px 18px rgba(91, 192, 222, .9) inset;
+		
+	}
+}
+
+
+
+@-webkit-keyframes run {
+	0%{
+	width: 0;
+	height: 0
+}
+
+50% {
+	width:1 60px;
+	height: 60px
+}
+
+100% {
+	width: 100px;
+	height: 30px
+}
+}
+
+@-moz-keyframes run {
+	0% {
+		width: 0;
+		height: 0
+	}
+
+	50% {
+		width: 160px;
+		height: 60px
+	}
+
+	100% {
+		width: 100px;
+		height: 30px
+	}
+}
+
+@-o-keyframes run {
+	0% {
+		width: 0;
+		height: 0
+	}
+
+	50% {
+		width: 160px;
+		height: 60px
+	}
+
+	100% {
+		width: 100px;
+		height: 30px
+	}
+}
+
+@keyframes run {
+	0% {
+		width: 0;
+		height: 0
+	}
+
+	50% {
+		width: 160px;
+		height: 60px
+	}
+
+	100% {
+		width: 100px;
+		height: 30px
+	}
+}
+
+.eno{
+	animation: run 2s ease-in-out infinite alternate;
+    -webkit-animation: run 2s ease-in-out infinite alternate;
+    -moz-animation: run 2s ease-in-out infinite alternate;
+    -o-animation: run 2s ease-in-out infinite alternate;
+}
+.twinkle {
+   -webkit-animation: twinkle 6s linear;
+    -moz-animation: twinkle 6s linear;
+    animation: twinkle 6s linear;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-iteration-count: 1; 
+}
+.breath{
+	-webkit-animation: breath-lamp 1.5s ease-in-out infinite alternate;
+    -moz-animation: breath-lamp 1.5s ease-in-out infinite alternate;
+    animation: breath-lamp 1.5s ease-in-out infinite alternate;
+}
+
+@-o-keyframes dasharray-anim{
+from{ stroke-dashoffset:200;}
+to{stroke-dashoffset:0;}
+}
+@-webkit-keyframes dasharray-anim{
+from{ stroke-dashoffset:200;}
+to{stroke-dashoffset:0;}
+}
+@-moz-keyframes dasharray-anim{
+from{ stroke-dashoffset:200;}
+to{stroke-dashoffset:0;}
+}
+@keyframes dasharray-anim{
+from{ stroke-dashoffset:200;}
+to{stroke-dashoffset:0;}
+}
+
+.dasharray-anim{
+	animation: dasharray-anim 4s linear infinite ;
+    -webkit-animation: dasharray-anim 4s linear infinite ;
+    -moz-animation: dasharray-anim 4s linear infinite ;
+    -o-animation: dasharray-anim 4s linear infinite ;
+}

@@ -1,0 +1,426 @@
+<style type="text/css">
+	/*头部*/
+.header {
+	width: 100%;
+	height: 45px;
+	background-color: rgba(10, 17, 27, 1) !important;
+	color: white;
+	padding: 0;
+	border-radius: 0;
+	-webkit-box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.35);
+	box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.35);
+	z-index: 999;
+	position: relative;
+}
+
+.header .logo {
+	height:100%;
+	float: left;
+	position: relative
+}
+
+.header .login {
+	width: 225px;
+	height:100%;
+	float: right;
+	text-align: right;
+	display: table;
+}
+/**/
+.header .login span {
+	display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+    cursor: pointer;
+    line-height: 53px;
+    cursor: pointer;
+    min-width: 45px;
+    height: 45px;
+}
+
+.header .login span:before {
+	position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 48px;
+    height: 100%;
+}
+
+.header .login #NAME {
+	color: white;
+	padding-left: 45px;
+    text-align: center;
+	
+}
+
+.header .login #NAME:before {
+	background: url(../resource/images/usermsg.png) no-repeat;
+	    background-size: 50%;
+    background-position: 50%;
+    
+}
+
+.header .login #NAME:hover {
+	color:#008fff;
+}
+.header .login #NAME:hover:before {
+	background: url(../resource/images/usermsg.active.png) no-repeat;
+	    background-size: 50%;
+    background-position: 50%;
+}
+
+
+.header .login #HOME:before {
+	background: url(../resource/images/home.png) no-repeat;
+	    background-size: 50%;
+    background-position: 50%;
+}
+
+.header .login #HOME:hover:before {
+	background: url(../resource/images/home.active.png) no-repeat;
+	    background-size: 50%;
+    background-position: 50%;
+}
+
+.header .login #EXIT:before {
+	background: url(../resource/images/exit.png) no-repeat;
+	    background-size: 50%;
+    background-position: 50%;
+}
+.header .login #EXIT:hover:before {
+	background: url(../resource/images/exit.active.png) no-repeat;
+	    background-size: 50%;
+    background-position: 50%;
+}
+.header .login #warn {
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: red;
+	border-radius: 25px;
+	position: absolute;
+	top: 13px;
+	right: 80px;
+	color: white;
+	text-align: center;
+}
+/**/
+.header .logo img {
+	height: 100%;
+}
+
+.panel-title{
+	margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+    padding: 0;
+    height: 100%;
+    display: inline-block;
+    line-height: 49px;
+    vertical-align: middle;
+}
+.menu-inner {
+	overflow: hidden;
+	width: 100%;
+	background: #20272d;
+}
+.menu-inner .menu-head{
+	background: #151a1e;
+	position: relative;
+	height: 45px;
+    padding: 0;
+    padding-left:10px;
+}
+.menu-inner .menu-status{
+	position: absolute;
+    display: block;
+    height: 16px;
+    width: 16px;
+    right: 5px;
+    top: calc(50% - 8px);
+    background: url(../resource/images/menu-arrow.png) no-repeat;
+    background-size: contain;
+}
+.menu-in{
+	transform: rotate(0deg);
+}
+.menu-out{
+	transform: rotate(180deg);
+}
+.menu-inner .menu-items {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	/* background: rgba(50, 50, 50, 1); */
+}
+
+.menu-inner .menu-items li {
+	transition: .5s;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	height: 36px;
+	line-height: 36px;
+	padding-left: 20%;
+	position: relative;
+	list-style: none;
+	border-bottom: 1px solid transparent;
+	border-top: 1px solid #303a43;
+}
+
+.menu-inner  .icons {
+	/* position: absolute; */
+	display: inline-block;
+	height: 100%;
+    width: 20px;
+    background-size: 20px 20px;
+    background-position: 50%;
+	background-repeat: no-repeat;
+	vertical-align:middle;
+}
+
+.menu-inner .menu-items li .bg-img {
+	/*background: url("../resource/images/bg.png") no-repeat;
+	background-size: 100% 100%;*/
+	opacity: 0;
+}
+
+.menu-inner .menu-items li .bg-img {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	vertical-align:middle;
+	left:0;
+	top:0;
+	font-size: 14px;
+	color: #888e9c;
+	cursor: pointer;
+	position: absolute;
+	transition: 0.3s;
+	
+}
+.menu-inner .menu-items li .text {
+	height: 100%;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 40px;
+	color: #ccc;
+	cursor: pointer;
+	vertical-align:middle;
+}
+/* .menu-inner .menu-items li.selected>.bg-img {
+	opacity: 1;
+} */
+.menu-inner .menu-item.selected{
+	background: #1d83cc;
+}
+.menu-inner .menu-head:hover{
+	background: #1d83cc;
+}
+
+.menu-inner .menu-item.selected .text {
+	color: #ffffff;
+}
+
+.menu-inner .menu-item:hover{
+	background: #1d83cc;
+	color:#ffffff;
+}
+
+/* .menu-inner .menu-items li:hover>.bg-img {
+	opacity: 1;
+} */
+
+.menu-inner .menu-item span:hover {
+	color: #ffffff;
+}
+
+#content {
+	/* display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	position: absolute;
+	top: 60px;
+	width: 100%;
+	z-index: 10; */
+}
+
+#content-left {
+	min-width: 140px;
+}
+
+#content-center {
+	min-width: 900px;
+}
+
+.separator {
+	height: 1px;
+	background: #333333;
+}
+
+
+.menu-group {
+    float: right;
+}
+
+.menu-button {
+	transition: .5s;
+	float:left;
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-right: 1px solid #797979;
+}
+.menu-button .menu-icon{
+	border:1px solid transparent;
+	position:absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+}
+.menu-icon:before{
+	content: '';
+    display: block;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    background-color: #ffffff;
+    padding: 6px 0;
+    background-clip: content-box;
+    transition:transform .3s;
+}
+.menu-icon:after{
+	content: '';
+    display: block;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    background-color: #ffffff;
+    padding: 6px 0;
+    background-clip: content-box;
+    transition: transform .3s; 
+}
+.menu-button:hover{
+	background:rgba(29, 131, 204, 1);
+}
+.menu-button:hover>.menu-icon::before{
+	border-top: 0px solid #ffffff;
+    border-bottom: 0px solid #ffffff;
+	padding: 8px 0;
+	transform: rotate(45deg);
+}
+.menu-button:hover>.menu-icon::after{
+	border-top: 0px solid #ffffff;
+    border-bottom: 0px solid #ffffff;
+	padding: 8px 0;
+	transform: rotate(-45deg);
+}
+.menu-button:hover > .hidden-menu {
+    z-index: 999;
+    left: 0px;
+    opacity: 1;
+}
+
+.hidden-menu {
+    transition: left .5s cubic-bezier(0.6, 0.6, 0.57, 1.1),opacity 0.6s ease-in-out,z-index .6s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+    opacity: 0;
+    left: -160px;
+    top: 45px;
+    position: absolute;
+    overflow-y: auto;
+    width: 160px;
+    max-height: 400px;
+    padding: 0;
+    margin: 0;
+}
+
+</style>
+<div id="header" class="header">
+    <div class="logo">
+        <div class="menu-button">
+            <div class="menu-icon"></div>
+            <div id="menu-buttons" class="hidden-menu">
+                    <div id="content-left" >
+                        <div class="menu-inner">
+                            <div id="menu-inner" role="tablist" aria-multiselectable="true">
+
+                            </div>
+                        </div>
+                    </div>
+             </div>
+        </div>
+        <img src="/resource/images/logo.png">
+        <div class="clear"></div>
+    </div>
+
+    <div class="login">
+    	<span id="HOME" title="首页"></span>
+        <span id="NAME"></span>
+        <span id="EXIT" title="退出"></span>
+    </div>
+</div>
+<script type="text/javascript">
+		window.onload=function(){
+			var script = document.createElement("script");
+			script.type = "text/javascript";
+			script.src = '/resource/public/javascripts/menu.js';
+			document.body.appendChild(script);
+		}
+</script>
+
+
+<script type="text/html" id="menu-template">
+    {{each data as item}}
+    <div class="">
+
+        {{if item.id=='27'}}
+            <div id="{{item.id}}" class=" menu-head menu-item" role="tab" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+                <em class="icons" style="background-image: url(/resource/images/{{item.icon}})"></em>
+                <span class="panel-title" >
+                    {{item.name}}
+                </span>
+            </div>
+        {{else}}
+        <div class="menu-head" role="tab" role="button" data-toggle="collapse" data-parent="#menu-item"
+                href="\#{{item.id}}" aria-expanded="true" aria-controls="collapseOne">
+            <em class="icons" style="background-image: url(/resource/images/{{item.icon}})"></em>
+            <span class="panel-title" >
+                {{item.name}}
+            </span>
+            <span class="menu-status {{if item.active}} menu-in {{else}} menu-out {{/if}}"></span>
+        </div>
+        <div id="{{item.id}}" class="panel-collapse collapse {{if item.active}}in{{/if}}" role="tabpanel"
+             aria-labelledby="headingOne">
+            <ul class="menu-items">
+                {{each item.child as child index}}
+                <li class="menu-item {{if child.selected}}selected{{/if}}" id="{{child.id}}">
+                    <span class="bg-img"></span>
+                    <em class="icons" style="background-image: url(/resource/images/{{child.icon}})"></em>
+                    <span class="text" target="iframe">
+                        <!--<em class="icon{{index}} icons"></em>-->
+                        {{child.name}}
+                    </span>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/if}}
+    </div>
+    <div class="separator"></div>
+    {{/each}}
+</script>

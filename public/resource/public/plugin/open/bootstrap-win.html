@@ -1,0 +1,45 @@
+<div id="{{id}}" class="custom-win">
+	<style type="text/css">
+		.close_image{
+			display:inline-block;
+			background: url(resource/images/icon/close.png) no-repeat ;
+			background-size: cover;
+			width: 30px;
+			height: 30px;
+		}
+		#hidden-done{
+			display: none;
+		}
+		.hidden-done{
+			height: 100%;
+		}
+		.hidden-done .modal-header{
+			height: 0;
+			padding: 0;
+		}
+		.hidden-done .modal-body{
+			width: 95%;
+			height: 100%;
+		}
+	</style>
+	<div id="{{modalId}}" class="modal fade custom-modal"  tabindex="-1" role="dialog" >
+		<div class="modal-dialog custom-dialog" role="document" style="width:{{width}}px;height:{{bgheight}}px;margin:0;">
+			<div class="modal-content {{hiddenDone}}" >
+				<div class="modal-header ">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="close_image"></span></button>
+					<h4 class="modal-title" id="{{hiddenDone}}">{{title}}</h4>
+				</div>
+				<div class="modal-body" >
+					<div  style="height:{{height}}px;">
+						<iframe style="background-color:transparent;" src="{{url}}"  height="100%" width="100%" frameborder=0 border=0 hspace=0  vspace=0 marginheight=0  marginwidth=0 ></iframe>
+					</div>
+
+				</div>
+				<!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                  <button type="button" class="btn btn-primary">确定</button>
+                </div> -->
+			</div>
+		</div>
+	</div>
+</div>

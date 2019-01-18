@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*基础设置*/
+body{margin:0;padding:0;font-size:12px;font-family:Verdana, Geneva, sans-serif;color:#4D5A62;background:url(../img/body-bg.jpg) no-repeat center top}
+div,ul,li,form,p,select,input,span,i,em,dl,dd,dt{margin:0;padding:0;list-style:none;font-style:normal;}
+a{text-decoration:none;}
+.clear{clear:both;height:0;overflow:hidden;}
+img{border:none;}
+
+.login_top{margin-top: -110px;margin-left: 50px;position:absolute;}
+.login_con{position:relative;width:388px;height:456px;/* background:url(../img/login_background.png.jpg) */;margin:0 auto;position:relative;}
+.username{float:left;height:36px;width:100px;line-height:36px;text-align:right;font-family:"Microsoft YaHei";font-size:14px;padding-right:8px}
+.login_con li{clear:both;height:50px;}
+.input{width:231px;float:left; border-radius:3px;border:none;font-family:Verdana, Geneva, sans-serif;padding:9px 5px;box-shadow: #acacac 0px 0px 3px;}
+.login_con form{padding-top:195px;padding-left:39px;}
+.butn{width:243px;height:38px;background:#399fc0;border:none; border-radius:3px;text-align:center;color:#fff; cursor:pointer;}
+.butn:active{background:#3197b8}
+.yz{width:130px;}
+.img{float:left;margin-left:8px;}
+.login_con li a{color:#2a88a7}
+.tips{width:233px;height:51px;line-height:42px;font-family:"Microsoft YaHei";color:#fff;font-size:16px;background:url(../img/tips.png);padding-left:10px;position:absolute;top:131px;left:105px;}
+.login_dk{display:block;position:absolute;width:61px;height:61px;right:3px;top:3px;}

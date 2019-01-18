@@ -1,0 +1,94 @@
+<%-  include('app-variables.html') -%>
+<title>E文件上传器</title>
+<script  src="./swf-upload/flex-file-upload/jquery.swfUpload.js"></script>
+</head>
+
+<body>
+	<div id="form">
+		<!--/swfUploadFile/fileUploadBtn.html?fieldName=aaa&customEvents=MiniEvents.onSwfFileUpload-->
+	<span id="progress"></span>
+	<div name='aaa'  class='mini-textbox'  errorMode='border'  label='上传' labelField='true' allowInput='false'></div>
+		<button id="upbtn">上传</button>
+		<div id="impTmp" style="width:100px;height:100px;"></div>
+		<img id="image" src="">
+		<!--<iframe id='aaa' height='50'  width='100%' src="/swfUploadFile/fileUploadBtn.html?fieldName=aaa&customEvents=MiniEvents.onSwfFileUpload" frameborder='no' border='0' marginwidth='0' marginheight='0'  allowtransparency='yes'></iframe>-->
+	</div>
+
+	<script type="text/javascript">
+		var customEvents = '<%=customEvents %>';
+		$(function(){
+			console.info(customEvents);
+			$('#submit').click(function(){
+				var form=new mini.Form('form');
+				var  filesJson  = mini.encode(MiniEvents.filesData);
+				alert( mini.encode(form.getData()));
+				alert( mini.encode(filesJson));
+			});
+			var u= $("#impTmp").swfUpload({
+				swffile:'./swf-upload/flex-file-upload/FileUpload.swf',
+				params:{
+					autoUpload:false,//是否自动执行上传
+					url:'/fileUpload',
+					label:'读取文件'
+				},
+				fileFilters:[{
+						describe:'测试',
+						extension:'*.jpg'
+				}],
+				 btnStyle:{
+					fontSize:14
+				},
+				"debug" : function(msg) {
+					console.log("debug:"+msg);
+				},
+				"onError":function(error){
+					console.info(error);
+					/* me.tip.hide(); */
+				},
+				"onSelect":function(msg){
+					/* me.tip = showTips({
+	                    autoClose:false,
+	                    content:'<b>提示</b> <br/>正在提交...！',
+	                    state : 'danger',
+	                    open:function(){}
+	                }); */
+					console.info("onSelect"+msg);
+				},
+				"onProgress" : function(p) {
+					$('#progress').html((p.bytesLoaded/p.bytesTotal)*100);
+					console.log(p);
+				},
+				'onSuccess':function(msg){
+					console.log("上传成功！");
+					console.info(msg);
+					var result = JSON.parse(msg.data);
+
+
+					if(result.success){
+						$('#image').attr('src',result.data.path);
+					}else{
+
+					}
+				}
+			});
+			$('#upbtn').click(function(){
+				u.onSubmitUpload();
+			});
+			
+		})
+	</script>
+
+
+	<div id="upload_button"></div>
+
+
+
+
+	<div>
+		<div class="fileTemp"></div>
+
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+
+<script>
+	
+	window.__loginErrorMessage = '<%=locals.message %>';
+	
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="renderer" content="webkit">
+<title>登录</title>
+	<meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <title>天行安全智能监测平台</title>
+	<%- include('../common/css-container.html') -%>
+    <link rel="shortcut icon" href="/resource/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/login/main.css" />
+</head>
+<!--可修改-->
+<style>
+	#change-password-for-30-day{
+		display: none;
+		width: 500px;
+		height: 150px;
+		padding: 5px;
+		border: 1px solid #345d7b;
+		border-radius: 5px;
+		position: fixed;
+		top:4%;
+		left: calc( 50% - 250px);
+		z-index: 99999;
+
+	}
+	#change-password-for-30-day h4{
+		font-size: 18px;
+		height: 45px;
+		line-height: 45px;
+		text-align: center;
+	}
+	#change-password-for-30-day input{
+		width: 231px;
+		border-radius: 3px;
+		border: none;
+		font-family: Verdana, Geneva, sans-serif;
+		padding: 6px 5px;
+		box-shadow: #acacac 0 0 3px;
+	}
+	#change-password-for-30-day button{
+		background: #3366CC;
+		border: 1px solid  rgb(117, 205, 241);
+		color: rgb(255, 255, 255);
+		-webkit-box-shadow: 0 0 12px transparent;
+		box-shadow: 0 0 12px transparent;
+		border-radius: 5px;
+		width: 84px;
+		opacity: 0.7;
+		transition: .3s;
+		height: 35px;
+		line-height: 35px;
+	}
+</style>
+<body>
+<div class="panel panel-default row-lg-12 col-xs-12">
+	<div class="panel-body">
+		<div class="login-form">
+			<form id="login-form" class="form-horizontal" action="/login-submit" method="post" enctype="application/x-www-form-urlencoded">
+				<!--TODO判断是否需要证书-->
+				<% if (key) { %>
+				<span class="certificate-icon" title="读取证书文件"></span>
+				<% } %>
+				<span class="title">SIP3.0安全智能监测平台</span>
+				<div id="login-error">
+					<div class="login-error-message">
+						<span class="error"></span>
+					</div>
+					
+				</div>
+				<label  class="login">
+					<div class="login-input user">
+						<span class="corner b1"></span> <span class="corner b2"></span> <span
+						class="corner b3"></span> <span class="corner b4"></span>
+						<input tabindex="1" type="text" autocomplete="off" name="key" class="form-control required" id="user" placeholder="用户名">
+					</div>
+				</label>
+				<label  class="login">
+					<div class="login-input password">
+						<span class="corner b1"></span> <span class="corner b2"></span> <span
+					class="corner b3"></span> <span class="corner b4"></span>
+						<input tabindex="2" type="password" class="form-control required" id="pwd" name="password" placeholder="密码">
+					</div>
+					
+				</label>
+				<label class="login">
+					<div class="login-input captcha input-group">
+							<span class="corner b1"></span> <span class="corner b2"></span> <span
+					class="corner b3"></span> <span class="corner b4"></span>
+							<input tabindex="3" type="text" autocomplete="off" name="captcha" class="form-control required" maxlength="4" />
+							<span class="input-group-addon login-captcha">
+								<img id="captcha-image" name="loadCaptcha" title="点击更换图片" src="/captcha" width="95" height="35" style="cursor: pointer;opacity: 0.8;" />
+							</span>
+					</div>
+					
+				</label>
+				<label class="login">
+					<button tabindex="4" type="button" id="login" class="btn btn-default login-btn">登录</button>
+				</label>
+				<!--判断是否需要证书-->
+				<% if (key) { %>
+				<div class="certificate">
+					<div class="certificate-table">
+						<div class="certificate-cell">
+							<div class="alert-body">
+								<div class="alert-title">
+									<label style="float: left;">上传证书</label>
+									<span class="alert-close" style="float:right;padding-right: 8px;">x</span>
+								</div>
+								<div class="alert-content">
+
+									<span style="text-align:center;font-size:16px;">
+										<p class="certificate-name">文件名:<span id="file-name" style="font-size: 12px;"></span></p>
+										<div id="certificate-file" class="login-btn">
+											<span class="glyphicon glyphicon-open upload" title="上传"></span>读取文件
+										</div>
+									</span> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% } %>
+				<!-- <c:if test="${keyUse== 1 }"> -->
+					<!-- <div class="certificate"  style="display: none;">
+						<div class="certificate-body">
+							<div class="alert-body">
+								<div class="alert-title">
+									<label style="float: left;">提示信息</label>
+								</div>
+								<div class="alert-content"><span style="text-align:center;font-size:16px;">请上传证书</span> </div>
+								<div class="alert-btns" style="text-align: center;"><button class="btn btn-primary btn-xs" onclick="doOk()">确定</button></div>
+							</div>
+						</div>
+					</div> -->
+			<!-- 	</c:if> -->
+				
+				<p class="banben">版本号:SIP3.0 | 技术支持:400-609-2500</p>
+			</form>
+
+		</div>
+
+		<!--可修改的-->
+	<!-- 	<div id="change-password-for-30-day">
+			<h4>修改密码</h4>
+			<div style="height: 50px;padding-top: 10px;padding-left: 20px;float:left;">
+				<span style="font-size: 15px;">请输入新密码: </span>
+				<input  type="password" id="password-input">
+			</div>
+			<div style=" text-align: right;margin-right: 30px;margin-top: 10px;">
+				<button id="true-password-for-30-day">确认</button>
+			</div>
+		</div> -->
+	</div>
+</div>
+	<%- include('../common/js-container.html') -%>
+	<script src="/resource/public/plugin/threejs/three.js"></script>
+	<script src="/resource/public/plugin/threejs/TrackballControls.js"></script>
+	<script src="/login/cosmos/cosmos.js"></script>
+	<script src="/login/main.js"></script>
+</body>
+</html>

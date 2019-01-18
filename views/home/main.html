@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <title>天行安全智能监测平台</title>
+    <%- include('../common/css-container.html') -%>
+    <link rel="shortcut icon" href="/resource/images/favicon.ico">
+    <script>
+    	_loginMsg = '${message}'
+    	_licenseMsg = '${licenseMessage}'
+    </script>
+</head>
+<body>
+<div  class="row-lg-12 col-xs-12">
+    <div class="panel panel-default row-lg-12 col-xs-12">
+        <div class="panel-heading header">
+            <%- include('../common/head.html')%>
+        </div>
+        <div id="content" class="panel-body">
+            
+            <div id="content-center" class="panel panel-default row-lg-12 col-xs-12 ">
+                <div id="content-center-iframe" class="panel-body">
+                    <!--<iframe   frameborder="0" border="0" hspace="0" vspace="0" scrolling="no" marginwidth="0" marginheight="0" allowtransparency="true" height="100%" width="100%" style="background-color: transparent;"  ></iframe>-->
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<%- include('../common/js-container.html') -%>
+<script src="/resource/public/bootstrap-3.3.7/dist/js/bootsrtap-layout.js"></script>
+<script src="/resource/public/javascripts/date-time.min.js"></script>
+
+</body>
+</html>
+

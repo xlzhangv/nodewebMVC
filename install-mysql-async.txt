@@ -1,0 +1,4 @@
+npm install mysql;
+npm install async;
+npm install node-uuid;
+npm install formidable;

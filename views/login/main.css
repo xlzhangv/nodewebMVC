@@ -1,0 +1,304 @@
+html,body{
+	background-image: url(image/login-bg.jpg);
+	background-size: 100% 100%;
+}
+.error-message{
+	position: absolute;
+	transition: .5s;
+	top:0;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	color:red;
+	font-size: 14px;
+}
+.input-error[type='text']{
+	  border-color: #a00808 !important;
+	  -webkit-box-shadow: 0 0 20px 3px rgba(255, 0, 0, 0.6);
+          box-shadow: 0 0 20px 3px rgba(255, 0, 0, 0.6);
+}
+.input-error[type='password']{
+	  border-color: #a00808 !important;
+	  -webkit-box-shadow: 0 0 20px 3px rgba(255, 0, 0, 0.6);
+          box-shadow: 0 0 20px 3px rgba(255, 0, 0, 0.6);
+}
+.panel-body{
+	clear: left; overflow: initial;display: table;
+	width: 100%;
+	height: 100%;
+}
+.login-form{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 465px; 
+    padding-top:8.5%;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+}
+.title {
+	font-size: 22px;
+}
+.login{
+	width: 100%;
+	padding: 0px 50px;
+	margin: 15px 0;
+	position: relative;
+}
+.login input{
+    transition: .5s;
+    border-radius:0;
+	background-color: transparent !important;
+    border:1px solid rgba(21, 68, 117, 0.8);
+    text-indent: 60px;
+    color: #fff !important;
+    padding: 20px 0px;
+    display: inline-block;
+    font-size: 16px;
+}
+.login .login-captcha{
+	transition: .5s;
+    border-radius:0;
+	background-color: transparent !important;
+    border:1px solid rgba(21, 68, 117, 0.8);
+    border-left-color:transparent;
+    color: #fff !important;
+    font-size: 20px;
+    padding: 1px 2px;
+}
+.form-control:focus {
+  border-color: rgba(102, 175, 233, 0.8);
+  -webkit-box-shadow: 0 0 20px 3px rgba(125, 179, 222, 0.6);
+          box-shadow: 0 0 20px 3px rgba(125, 179, 222, 0.6);
+}
+
+.login>label{
+    position: absolute;
+    top: 34%;
+    right: 12%;
+    width: 100%;
+    text-align: right;
+}
+.login-input{
+	position: relative;
+}
+.login-input::before{
+	position: absolute;
+    left: 15px;
+    content: "";
+    width: 25px;
+    height: 100%;
+    display: inline-block;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+	
+}
+
+.user::before{
+	background-image: url(icon/userName.svg);
+}
+
+.password::before{
+	background-image: url(icon/password.svg);
+}
+.captcha::before{
+    position: absolute;
+    left: 0;
+    content: "验证码:";
+    width: 90px;
+    line-height: 1.42857143;
+    padding: 9px 0;
+    height: 100%;
+    font-size: 16px;
+    color: #8c8c8c;
+}
+.captcha input{
+	text-indent: 90px;
+	letter-spacing: 20px;
+}
+.login-btn:focus,
+.login-btn:active:focus,
+.login-btn.active:focus,
+.login-btn.focus,
+.login-btn:active.focus,
+.login-btn.active.focus 
+{
+	border: 1px solid rgba(69, 148, 246, 0.6);
+    background-color: rgba(34, 102, 246, .6);
+}
+.login-btn{
+	font-size: 18px;
+    background: -webkit-linear-gradient(0deg, rgba(29, 63, 146, 0.8) 0%, rgba(29, 63, 146, 0.8) 0%, rgba(51, 102, 204, 0.8) 100%, rgba(51, 102, 204, 0.8) 100%);
+    background: -moz-linear-gradient(0deg, rgba(29, 63, 146, 0.8) 0%, rgba(29, 63, 146, 0.8) 0%, rgba(51, 102, 204, 0.8) 100%, rgba(51, 102, 204, 0.8) 100%);
+    background: linear-gradient(0deg, rgba(29, 63, 146, 0.8) 0%, rgba(29, 63, 146, 0.8) 0%, rgba(51, 102, 204, 0.8) 100%, rgba(51, 102, 204, 0.8) 100%);
+    border: 1px solid rgba(69, 148, 246, 0.6);
+    background-color: rgba(34, 102, 246, .6);
+    color: rgb(255, 255, 255);
+    -webkit-box-shadow:0 0 12px transparent;
+    box-shadow: 0 0 12px transparent;
+    border-radius: 0;
+    width: 100%;
+    transition: .3s;
+}
+
+.login-btn:hover{
+ 	background: -webkit-linear-gradient(90deg, rgba(51, 102, 204, 0.8) 0%, rgba(51, 102, 204, 0.8) 0%, rgba(29, 63, 146, 0.8) 100%, rgba(29, 63, 146, 0.8) 100%);
+    background: -moz-linear-gradient(0deg, rgba(51, 102, 204, 0.8) 0%, rgba(51, 102, 204, 0.8) 0%, rgba(29, 63, 146, 0.8) 100%, rgba(29, 63, 146, 0.8) 100%);
+    background: linear-gradient(0deg, rgba(51, 102, 204, 0.8) 0%, rgba(51, 102, 204, 0.8) 0%, rgba(29, 63, 146, 0.8) 100%, rgba(29, 63, 146, 0.8) 100%);
+    border: 1px solid rgba(51, 102, 204, 1);
+    -webkit-box-shadow:0 0 12px rgba(51, 102, 204, 1);
+    box-shadow: 0 0 12px rgba(51, 102, 204, 1);
+    border-radius: 0;
+    width: 100%;
+}
+
+:root {
+ --main-border-color: #67e3fa;
+ --main-border-width:1px;
+ --main-border-p:0px;
+}
+.corner{
+	 z-index: 9;
+	 position:absolute;
+     padding: 2px;
+     border-style: solid;
+     border-color: #67e3fa;
+}
+
+@supports ( (--size: 0)) {
+	.b1{
+		border-width: var(--main-border-width) 0 0 var(--main-border-width);
+		top:var(--main-border-p);
+		left:var(--main-border-p);
+	}
+	.b2{
+		border-width: var(--main-border-width) var(--main-border-width) 0 0;
+		top:var(--main-border-p);
+		right:var(--main-border-p);
+	}
+	.b3{
+		border-width: 0 var(--main-border-width) var(--main-border-width) 0;
+		bottom:var(--main-border-p);
+		right:var(--main-border-p);
+	}
+	.b4{
+		border-width: 0 0 var(--main-border-width) var(--main-border-width);
+		bottom:var(--main-border-p);
+		left:var(--main-border-p);
+	}
+}
+
+@supports ( not (--size: 0)) {
+	.b1{
+		border-width: 1px 0 0 1px;
+		top:0px;
+		left:0px;
+	}
+	.b2{
+		border-width: 1px 1px 0 0;
+		top:0px;
+		right:0px;
+	}
+	.b3{
+		border-width: 0 1px 1px 0;
+		bottom:0px;
+		right:0px;
+	}
+	.b4{
+		border-width: 0 0 1px 1px;
+		bottom:0px;
+		left:0px;
+	}
+}
+form{
+	position: relative;
+}
+.banben{
+	position: absolute;right: 0;
+	    color: #666;
+	    font-size: 12px;
+}
+.certificate-icon{
+	position:absolute;
+	left:0;
+	top:0;
+	display: block;
+	height: 40px;
+    width: 40px;
+	background-image: url("icon/certificate-off.png");
+	background-size: contain;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+.certificate{
+	position: absolute;
+	top:0;
+	z-index:10;
+	width: 100%;
+	height: 100%;
+	background: rgba(199, 199, 199, 0.4);
+    border-radius: 10px;
+}
+.certificate-table{
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.certificate-cell{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+.certificate-name{
+	width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px 0;
+}
+#certificate-file{
+	width: 70%;
+    margin: 0 auto;
+    user-select: none;
+    cursor: pointer;
+}
+.certificate .alert-content{
+	vertical-align: top;
+}
+.certificate .alert-body{
+	margin: 0 auto;
+}
+.upload{
+	position: fixed;
+    top: -1000px;
+    left: -1000px;
+}
+.login-error-message {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+#login-error {
+	-webkit-box-shadow: inset 0 0 9px 1px rgb(255, 0, 0);
+	box-shadow: inset 0 0 9px 1px rgb(255, 0, 0);
+	background: rgba(22, 54, 100, 0.78);
+	border-radius: 10px;
+	z-index: 999;
+	position: absolute;
+	transition: cubic-bezier(0.18, 0.89, 0.32, 1.98) .4s;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	font-size: 20px;
+	width: 100%;
+	height: 100%;
+}
+
+#login-error .error{
+	display: table-cell;
+	vertical-align: middle;
+	color:red;
+	text-shadow: 0 0 0.2em #a00808, 0 0 0.2em #a00808,0 0 0.2em #a00808;
+}

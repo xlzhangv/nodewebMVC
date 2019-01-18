@@ -1,0 +1,109 @@
+{
+  "data": [
+  {
+      "name": "资产档案",
+      "id": "1",
+      "icon": "",
+      "active": true,
+      "target": "_self",
+      "child": [
+        {
+          "name": "应用系统",
+          "id": "2",
+          "icon": "background: url('./images/icon1-2.png')",
+          "selected": true,
+          "url": "applysystem",
+          "target": "_self"
+        },
+        {
+          "name": "数据库",
+          "id": "3",
+          "icon": "background: url('./images/icon2-2.png')",
+          "url": "database",
+          "target": "_self"
+        },
+        {
+          "name": "服务器",
+          "id": "4",
+          "icon": "background: url('./images/icon3-2.png')",
+          "url": "server",
+          "target": "_self"
+        },
+        {
+          "name": "硬件资产",
+          "id": "5",
+          "icon": "background: url('./images/icon3-2.png')",
+          "url": "hardasset",
+          "target": "_self"
+        },
+        {
+          "name": "资产审核",
+          "id": "6",
+          "icon": "background: url('./images/icon3-2.png')",
+          "url": "applicationAudit",
+          "target": "_self"
+        }
+      ]
+    },
+    {
+      "name": "运维监控",
+      "id": "1",
+      "icon": "",
+      "active": true,
+      "target": "_self",
+      "child": [
+        {
+          "name": "设备监控",
+          "id": "2",
+          "icon": "background: url('./images/icon1-2.png')",
+          "selected": true,
+          "url": "allstatic/facmonitor/main.html",
+          "target": "_self"
+        },
+        {
+          "name": "设备告警",
+          "id": "3",
+          "icon": "background: url('./images/icon2-2.png')",
+          "url": "allstatic/facwarning/main.html",
+          "target": "_self"
+        },
+        {
+          "name": "告警策略",
+          "id": "4",
+          "icon": "background: url('./images/icon3-2.png')",
+          "url": "allstatic/facstrategy/main.html",
+          "target": "_self"
+        }
+      ]
+    },
+    {
+      "name": "用户管理",
+      "id": "5",
+      "icon": "",
+      "target": "_self",
+      "child": [
+        {
+          "name": "用户管理",
+          "id": "6",
+          "icon": "background: url('./images/icon4-2.png')",
+          "url": "allstatic/usermanage/main.html",
+          "target": "_self"
+        },
+        {
+          "name": "角色管理",
+          "id": "7",
+          "icon": "background: url('./images/icon5-2.png')",
+          "url": "allstatic/rolemanage/main.html",
+          "target": "_self"
+        },
+        {
+          "name": "权限管理",
+          "id": "8",
+          "icon": "background: url('./images/icon6-2.png')",
+          "url": "allstatic/authoritymanage/main.html",
+          "target": "_self"
+        }
+      ]
+    }
+  ]
+}

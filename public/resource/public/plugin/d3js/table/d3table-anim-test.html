@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>表格动画</title>
+<link rel="stylesheet" type="text/css" href="d3table-html.css">
+<link rel="stylesheet" type="text/css" href="../scroll/d3.scroll.css">
+<script src="../d3.v4.js"></script>
+<script src="../scroll/d3.scroll.js"></script>
+<style type="text/css">
+	.back-color{
+		height: 100%;
+	}
+	..grid-head-view{
+		position: relative;
+	}
+	td{
+		border:1px solid #ccc;
+	}
+</style>
+</head>
+<body onload="init()">
+	<div class="panel-head">
+		<div id="test" style="height: 500px;width: 600px;"></div>
+	</div>
+</body>
+</html>
+<script src="d3table-anim.js"></script>
+<script>
+	 var tableOptions={
+            		colorFun:function(scale){
+            			 return d3.scaleSequential(d3.interpolateWarm);
+            		
+            		},
+                options: {
+                	rowStyle: '4px 1px',
+                    cellBack:true,
+                 	autoSort:true,
+                    pageSize: 5,
+                    equalsFun:function(d,prevD){
+		                if(d.rowIndex==prevD.rowIndex){
+		                    return true;
+		                }
+		                return false;
+
+		            }
+                },
+                columns: [
+                    {
+                        text: '类别',
+                        width:100,
+                       
+                        dataIndex: 'name',
+                        renderer:function (v,d,dom) {
+                            return v;
+                        }
+                    },
+                    {
+                        text: '数量',
+                        sortable: true,
+                        backIndex:true,
+                        dataIndex: 'count',
+                        width:120
+                    },
+                    {
+                        text: '增长',
+                        dataIndex: 'up',
+                        width:120,
+                        // renderer: function (v, d, data, dom) {
+                        //     if(v>0){
+                        //     		return '+';
+                        //     }else{
+                        //     		return '-';
+                        //     }
+                        // }
+                    }
+                ],
+                events: {
+                    notData: function (b, viewBody) {
+                        if (b) {
+                            viewBody.selectAll('.echarts-nodata').data([{}]).enter().append('div').attr('class', 'echarts-nodata');
+                        } else {
+                            viewBody.select('.echarts-nodata').remove();
+                        }
+                    },
+                    afterload: function (v) {
+                        $('#total').text(v.total);
+                    },
+                    headClick: function (d, dom, table) {
+                        table.sortData(d, true);
+                    },
+                    items: {
+                        'click': function (d) {
+                           console.info(me.GRIDS['mysql'].getSelected());
+                        }
+                    }
+                }
+            }
+           
+        
+            
+         function init(){
+
+
+         	 var test = new D3TableAnim('test',tableOptions);
+                
+            	test.setData( [
+					      {"id":"MA001","name":"扫描探测","count":1155,up:1},
+					      {"id":"MA002","name":"获取权限","count":212,up:2},
+					      {"id":"MA003","name":"远程控制","count":332,up:3},
+					      {"id":"MA004","name":"数据盗取","count":1123,up:4},
+					      {"id":"MA005","name":"系统破坏","count":1323,up:5},
+					      {"id":"MA006","name":"隐藏痕迹","count":878,up:-1},
+					      {"id":"MA007","name":"有害程序","count":367,up:-1},
+					      {"id":"MA008","name":"恶意网站报警","count":355,up:-2},
+					      {"id":"MA009","name":"非法外联","count":244,up:-3},
+					      {"id":"MA010","name":"违规接入","count":233,up:-4}
+					    ]);
+
+        setInterval(function () {
+        				var 	v = [
+					      {"id":"MA"+Math.round(Math.random()*99),"name":"其他报警"+Math.round(Math.random()*99),"count":Math.round(Math.random()*2000),	up :Math.round(Math.random()*10)-5},
+					      {"id":"MA"+Math.round(Math.random()*99),"name":"其他报警"+Math.round(Math.random()*99),"count":Math.round(Math.random()*2000),	up :Math.round(Math.random()*10)-5},
+					      {"id":"MA"+Math.round(Math.random()*99),"name":"其他报警"+Math.round(Math.random()*99),"count":Math.round(Math.random()*2000),	up :Math.round(Math.random()*10)-5},
+					      {"id":"MA"+Math.round(Math.random()*99),"name":"其他报警"+Math.round(Math.random()*99),"count":Math.round(Math.random()*2000),	up :Math.round(Math.random()*10)-5},
+					      {"id":"MA"+Math.round(Math.random()*99),"name":"其他报警"+Math.round(Math.random()*99),"count":Math.round(Math.random()*2000),	up :Math.round(Math.random()*10)-5},
+					      {"id":"MA"+Math.round(Math.random()*99),"name":"其他报警"+Math.round(Math.random()*99),"count":Math.round(Math.random()*2000),	up :Math.round(Math.random()*10)-5},
+					      {"id":"MA"+Math.round(Math.random()*99),"name":"其他报警"+Math.round(Math.random()*99),"count":Math.round(Math.random()*2000),	up :Math.round(Math.random()*10)-5},
+					      {"id":"MA"+Math.round(Math.random()*99),"name":"其他报警"+Math.round(Math.random()*99),"count":Math.round(Math.random()*2000),	up :Math.round(Math.random()*10)-5},
+					      {"id":"MA"+Math.round(Math.random()*99),"name":"其他报警"+Math.round(Math.random()*99),"count":Math.round(Math.random()*2000),	up :Math.round(Math.random()*10)-5},
+					      {"id":"MA"+Math.round(Math.random()*99),"name":"其他报警"+Math.round(Math.random()*99),"count":Math.round(Math.random()*2000),	up :Math.round(Math.random()*10)-5}
+					    ]
+            			test.setData(v);
+       		 },4000);
+
+         }
+
+</script>
